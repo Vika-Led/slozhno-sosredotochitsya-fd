@@ -8,7 +8,6 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-
 :root.theme-dark {
   --heading-text: #db00ff;
   --accent-color: #ff0070;
