@@ -5,7 +5,9 @@
 */
 
 :root.theme-light {
-  --accent-color: #ff8dcb;
+  --heading-text: #FFC2E6;
+  --accent-color: #FF8DCB;
+  --box-shadow: #FF8DCB;
   --bg-color: #fff1f7;
   --subtitle-color: #353430;
   --text-color: #353430;
@@ -13,7 +15,6 @@
   --border-color: #353430;
   --border-color-hover: #32312D66;
   --border-bottom: #353430;
-  --heading-text: #ffc2e6;
   --bg-image: url(../images/cover-image-light.png);
 }
 

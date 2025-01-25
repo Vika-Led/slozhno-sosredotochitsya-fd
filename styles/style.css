@@ -240,7 +240,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding: 20px;
-  min-height: 668px;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
@@ -278,7 +278,7 @@ footer {
 
   .title {
     position: relative;
-    right: 20px; 
+    right: 20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -390,17 +390,17 @@ footer {
     grid-template-columns: 1fr 648px;
   }
 
-  .section-reduce__concentrate > .section__title {
+  .section-reduce__concentrate .section__title {
     width: 315px;
   }
 
-  .section-reduce__concentrate > .concentrate__container {
+  .section-reduce__concentrate .concentrate__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .section-how_to_concentrate_better  {
+  .section-how_to_concentrate_better {
     grid-template-columns: 1fr 648px;
   }
 

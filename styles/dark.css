@@ -11,6 +11,7 @@
 :root.theme-dark {
   --heading-text: #db00ff;
   --accent-color: #ff0070;
+  --box-shadow: #ff0070;
   --subtitle-color: #000028;
   --section-title-color: #ff0070;
   --bg-color: #000028;
@@ -30,6 +31,7 @@
   :root {
     --heading-text: #db00ff;
     --accent-color: #ff0070;
+    --box-shadow: #ff0070;
     --subtitle-color: #000028;
     --section-title-color: #ff0070;
     --bg-color: #000028;
