@@ -285,9 +285,10 @@ footer {
   .subtitle {
     width: 100%;
     max-width: 364px;
+    align-self: baseline;
   }
 
-  main {
+  .main {
     gap: 80px;
     padding-top: 60px;
     padding-right: 20px;
@@ -296,8 +297,9 @@ footer {
   }
 
   .section-focus {
-    grid-template-columns: 1fr 472px;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
+    padding: 0px 20px 0px 20px;
   }
 
   .section-reduce__concentrate {
@@ -310,7 +312,7 @@ footer {
   }
 
   .section-how_to_concentrate_better {
-    grid-template-columns: 1fr 472px;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
   
@@ -384,6 +386,10 @@ footer {
 
   .subtitle {
     max-width: 50%;
+  }
+  
+  .main {
+    gap: 80px;
   }
 
   .section-focus {
