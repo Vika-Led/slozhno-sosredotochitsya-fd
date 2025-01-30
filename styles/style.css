@@ -2,13 +2,12 @@
 /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
 .page {
-  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  font-family: var(--font-family);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
   font-size: 18px;
   font-weight: 400;
 }
@@ -30,7 +29,7 @@ header {
   border-block-start: 1px solid var(--border-color);
   width: 25px;
   height: 25px;
-  top: 15px;
+  top: 10px;
   right: 10px;
 }
 
@@ -39,7 +38,7 @@ header {
   position: absolute;
   border-inline-start: 1px solid var(--border-color);
   border-block-end: 1px solid var(--border-color);
-  bottom: 5px;
+  bottom: 10px;
   width: 25px;
   height: 25px;
   left: 10px;
@@ -47,28 +46,29 @@ header {
 
 .rec {
   position: absolute;
-  top: 15px;
-  right: 30px;
+  top: 10px;
+  right: 29px;
   color: var(--accent-color);
 }
 
 .rec::after {
   position: relative;
   top: -2px;
-  right: -10px;
+  right: -9px;
   content: '';
   display: inline-flex;
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .header__theme-menu {
   display: flex;
   flex-direction: column;
   justify-self: end;
+  margin-block-end: 5px;
 }
 
 .header__theme-menu-item {
@@ -118,7 +118,6 @@ header {
   line-height: 82.5%;
   color: var(--heading-text);
   text-shadow: 4px 4px 0px var(--box-shadow);
-  padding-top: 0px;
 }
 
 .subtitle {
@@ -134,14 +133,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-top: 45px;
+  padding-top: 40px;
   padding-right: 10px;
-  padding-bottom: 38px;
+  padding-bottom: 40px;
   padding-left: 10px;
-  background:var(--bg-color);
 }
 
-.section-focus {
+.section {
   display: grid;
   gap: 20px;
 }
@@ -152,14 +150,15 @@ header {
   color: var(--section-title-color);
 }
 
-.focus__container {
+.container {
   display: grid;
-  gap: 19px;
+  gap: 19.6px;
 }
 
 .section-article {
   display: grid;
   align-content: start;
+  gap: 10px;
 }
 
 .section-article__title {
@@ -170,11 +169,8 @@ header {
   height: fit-content;
 }
 
-.section-article__subtitle {
+.title-text__normal {
   font-weight: 400;
-  font-size: 18px;
-  color: var(--subtitle-color);
-  background-color: var(--accent-color);
 }
 
 .section-article__text {
@@ -183,7 +179,6 @@ header {
   font-size: 18px;
   color: var(--text-color);
   font-family: var(--font-family, "IBM Plex Mono", monospace);
-  padding-top: 10px;
 }
 
 .text-link {
@@ -201,26 +196,6 @@ header {
 
 .text-link:focus-visible {
   outline: 1px solid currentColor;
-}
-
-.section-reduce__concentrate {
-  display: grid;
-  gap: 20px;
-}
-
-.concentrate__container {
-  display: grid;
-  gap: 20px;
-}
-
-.section-how_to_concentrate_better {
-  display: grid;
-  gap: 19px;
-}
-
-.concentrate_better__container {
-  display: grid;
-  gap: 20px;
 }
 
 .gallery_image {
@@ -243,17 +218,11 @@ footer {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
 }
 
-.footer-title {
+.title_center {
   align-self: center;
-  font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--heading-text);
-  text-shadow: 2px 2px 0px var(--box-shadow);
-  font-family: var(--font-family, "IBM Plex Mono", monospace);
-  line-height: 82.5%;
+  margin-block-start: 3px;
 }
 
 /*Адаптив для 768px*/
@@ -262,18 +231,39 @@ footer {
   
   .header {
     justify-content: normal;
-    gap: 162px;
+    gap: 163px;
     padding: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .rec {
+    top: 20px;
+    right: 40px;
+  }
+
+  .rec::after {
+    position: relative;
+    top: -2px;
+    right: -11px;
   }
 
   .header__theme-menu {
     justify-self: end;
     align-self:flex-end;
-    padding-bottom: 10px;
+    margin-block-end: 12px;
   }
 
   .header__theme-menu-list {
-    gap: 13px;
+    gap: 10px;
   }
 
   .title {
@@ -289,121 +279,33 @@ footer {
   }
 
   .main {
-    gap: 80px;
+    gap: 79px;
     padding-top: 60px;
     padding-right: 20px;
     padding-bottom: 60px;
     padding-left: 20px;
   }
 
-  .section-focus {
+  .section {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
-  .section-reduce__concentrate {
-    grid-template-rows: min-content 1fr;
-    gap:20px;
+  .reduce__concentrate {
+    display: grid;
+    grid-template-columns: auto;
   }
 
-  .section-reduce__concentrate  .section__title {
-    width: 236px;
-  }
-
-  .section-how_to_concentrate_better {
-    grid-template-columns: 1fr 2fr;
+  .container {
     gap: 20px;
-  }
-  
-  .images {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .image__sunset {
-    grid-column: 1/3;
-  }
-
-  .image__ice-cream {
-    grid-column: 3/4;
-    grid-row: 1/3;
-  }
-
-  .image__tape {
-    grid-column: 1/2;
-    grid-row: 2/4;
-  }
-
-  .image__books {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .image__street {
-    grid-column: 2/4;
-    grid-row: 3/4;
-  }
-  
-  .footer-title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
 }
 
-/*Адаптив для 1024px*/
-
-@media (width >= 1024px) {
-
-  .header {
-    position: relative;
-    align-items: start;
-    justify-content: normal;
-    gap: 114px;
-    padding: 20px;
+  .reduce__concentrate .section__title {
+    width: 236px;
   }
-
-  .header__theme-menu {
-    justify-self: center;
-    align-self:flex-start;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .title {
-    padding-top: 0;
-    font-size: 157px;
-  }
-
-  .subtitle {
-    max-width: 50%;
-  }
-
-  .main {
-    gap: 80px;
-  }
-
-  .section-focus {
-    grid-template-columns: 1fr 648px;
-  }
-
-  .section-reduce__concentrate .section__title {
-    width: 315px;
-  }
-
-  .section-reduce__concentrate .concentrate__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .section-how_to_concentrate_better {
-    grid-template-columns: 1fr 648px;
-  }
-
+  
   .gallery_image {
+    gap: 20px;
     padding-top: 20px;
   }
 
@@ -430,8 +332,63 @@ footer {
     grid-column: 2/4;
     grid-row: 3/4;
   }
+  
+  .title_center {
+    right: 1px;
+  }
+}
 
-  .footer-title {
-    font-size: 157px;
+/*Адаптив для 1024px*/
+
+@media (width >= 1024px) {
+
+  .header {
+    position: relative;
+    align-items: start;
+    gap: 114px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self:flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: clamp(9.8125rem, 1.4489rem + 13.0682vw, 11.25rem);
+  }
+
+  .subtitle {
+    max-width: 50%;
+  }
+
+  .main {
+    gap: 80px;
+  }
+
+  .section {
+    grid-template-columns: 1fr 648px;
+  }
+
+  .container {
+    gap: 19.7px;
+}
+
+  .reduce__concentrate .section__title {
+    width: 315px;
+  }
+
+  .reduce__concentrate {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .section .concentrate {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }

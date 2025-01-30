@@ -14,7 +14,6 @@
   --box-shadow: #ff0070;
   --subtitle-color: #000028;
   --section-title-color: #ff0070;
-  --bg-color: #000028;
   --border-bottom: #f1b2ce;
   --border-color-hover: #ff007066;
   --text-color: #f1b2ce;
@@ -24,7 +23,6 @@
 
 .theme-dark .page {
   background-image: var(--bg-image);
-  background-color: var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +32,6 @@
     --box-shadow: #ff0070;
     --subtitle-color: #000028;
     --section-title-color: #ff0070;
-    --bg-color: #000028;
     --border-bottom: #f1b2ce;
     --border-color-hover: #ff007066;
     --text-color: #f1b2ce;
