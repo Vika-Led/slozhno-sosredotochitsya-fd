@@ -9,6 +9,7 @@
   --accent-color: #FF8DCB;
   --box-shadow: #FF8DCB;
   --subtitle-color: #353430;
+  --bg-color:#fff1f7;
   --text-color: #353430;
   --section-title-color: #353430;
   --border-color: #353430;
@@ -20,6 +21,7 @@
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
   background-image: var(--bg-image);
+  background-color: var(--bg-color);
 }
 
 .theme-light .rec {

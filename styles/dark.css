@@ -13,6 +13,7 @@
   --accent-color: #ff0070;
   --box-shadow: #ff0070;
   --subtitle-color: #000028;
+  --bg-color: #000028;
   --section-title-color: #ff0070;
   --border-bottom: #f1b2ce;
   --border-color-hover: #ff007066;
@@ -23,6 +24,7 @@
 
 .theme-dark .page {
   background-image: var(--bg-image);
+  background-color: var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +33,7 @@
     --accent-color: #ff0070;
     --box-shadow: #ff0070;
     --subtitle-color: #000028;
+    --bg-color: #000028;
     --section-title-color: #ff0070;
     --border-bottom: #f1b2ce;
     --border-color-hover: #ff007066;
