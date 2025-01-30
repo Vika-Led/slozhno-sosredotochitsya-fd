@@ -251,12 +251,6 @@ footer {
     right: 40px;
   }
 
-  .rec::after {
-    position: relative;
-    top: -2px;
-    right: -11px;
-  }
-
   .header__theme-menu {
     justify-self: end;
     align-self:flex-end;
@@ -370,7 +364,8 @@ footer {
     gap: 80px;
   }
 
-  .section {
+  .focus_section,
+  .how_to_concentrate_better {
     grid-template-columns: 1fr 648px;
   }
 
@@ -382,14 +377,7 @@ footer {
     width: 315px;
   }
 
-  .reduce__concentrate {
-    display: grid;
-    grid-template-columns: auto;
-  }
-
   .section .concentrate {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
   }
 }
