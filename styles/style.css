@@ -50,7 +50,7 @@ header {
   top: 10px;
   right: 29px;
   color: var(--accent-color);
-  display: none;
+  display: block;
 }
 
 .rec::after {

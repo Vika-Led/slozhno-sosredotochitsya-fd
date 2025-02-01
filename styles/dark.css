@@ -30,19 +30,3 @@
 .theme-dark .rec {
   display: block;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --heading-text: #db00ff;
-    --accent-color: #ff0070;
-    --box-shadow: #ff0070;
-    --subtitle-color: #000028;
-    --bg-color: #000028;
-    --section-title-color: #ff0070;
-    --border-bottom: #f1b2ce;
-    --border-color-hover: #ff007066;
-    --text-color: #f1b2ce;
-    --border-color: #ff0070;
-    --bg-image: url(../images/cover-image-dark.png);
-  }
-}
